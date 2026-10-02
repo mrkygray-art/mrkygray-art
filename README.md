@@ -1,6 +1,6 @@
 # Ky Gray
 
-### Solutions Engineer · Security Technology · AI-Built Software
+### Solutions Engineer · Security Technology · AI-Enabled Solutions
 
 I’m a Solutions Engineer with 20+ years across IT and security technology. I build working software around problems I’ve seen in the field — from solutions-engineering workflows and physical-security design to field capture, contractor operations, and AI voice agents.
 
