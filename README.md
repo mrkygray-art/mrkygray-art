@@ -34,6 +34,8 @@ Carries security projects from field survey through equipment planning, controll
 
 Built around missed-call intake, lead management, customer conversations, quotes, invoices, reviews, support requests, and business coaching for small contractor operations.
 
+[Try the interactive demo](https://powerquote-lite.vercel.app/demo)
+
 `SaaS` `Multi-tenant` `Contractor Operations` `CRM` `Supabase`
 
 ### 📸 PicTalk
