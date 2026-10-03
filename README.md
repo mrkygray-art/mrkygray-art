@@ -68,17 +68,18 @@ Engineering Mode makes the voice workflow inspectable: where the call is right n
 
 The **Evaluation Lab** measures how well the agents do, from what really happened:
 - a **scorecard** that keeps tests and real calls apart: emergencies escalated, priority vs. the rules, tool calls and handoffs that worked, calls completed, AI-judged checks, response time, and ElevenLabs' price per call, each number shown with the sample it's based on;
-- **16 regression tests** across three agents, run against the live ElevenLabs agents three times each;
-- a **fixes log** of 11 real problems: why each happened, what changed, and whether the fix still holds in the latest runs;
+- **21 regression tests** across three agents, run against the live ElevenLabs agents three times each, including **five where a caller tries to trick the agent** (fake "system notices", "ignore your instructions", pressure to escalate, asking for alarm codes or another customer's details);
+- **voice tests with real audio**: a scripted caller streams recorded speech to the live agent in noise and over a simulated phone line, measuring phone numbers and names heard exactly, talking over the agent, going quiet, and how long the caller waits;
+- a **fixes log** of 13 real problems: why each happened, what changed, and whether the fix still holds in the latest runs;
 - **failure injection** that replays known failures through the real server code in a sandbox.
 
-Two new tests failed on their first run: a caller who wouldn't give a name was refused help (0 of 3 runs passed), and a burning smell from the alarm panel didn't always get "call 911" (2 of 3). After fixing the agent's instructions and the server, all 13 of the front-desk agent's tests passed, 39 of 39 runs.
+New tests keep catching real problems. A caller who wouldn't give a name was refused help (0 of 3 runs passed), and a burning smell from the alarm panel didn't always get "call 911" (2 of 3). In the trick tests, the agent once announced a ticket without creating it; fixing that and re-running every test caught a second problem, a fake "system notice" that got the agent to page the technician, which a new guardrail closed. On real audio, every phone number came through exactly, and in a loud café one caller's name was misheard.
 
 This project demonstrates the full loop: **voice interaction → operational workflow → measurement → failure → fix → retest.**
 
 [Try the live demo](https://nightshift-dispatch.vercel.app/demo) · [See the Evaluation Lab](https://nightshift-dispatch.vercel.app/lab) · [View the code](https://github.com/mrkygray-art/nightagent)
 
-`AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Observability`
+`AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Voice Testing` `Prompt-Injection Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Observability`
 
 ### 🔥 WeldMate
 **Welding learning and field companion**
