@@ -52,15 +52,25 @@ This project demonstrates the full loop: **field capture → offline sync → sp
 `React` `Firebase` `Offline-first (IndexedDB)` `Cloud Functions` `Deepgram` `Live Streaming` `Claude API` `Observability`
 
 ### 🌙 NightAgent
-**AI voice service orchestration + agent QA engineering**
+**AI voice service orchestration + agent evaluation**
 
-NightAgent goes beyond a voice-agent demo. It handles after-hours service intake, triage, ticket creation, simulated dispatch and repair, customer follow-up, and service-to-sales handoff — then exposes the engineering behind the agent through **Simple Mode / Engineering Mode** and an **Agent QA Lab**.
+NightAgent goes beyond a voice-agent demo. It handles after-hours service intake, triage, ticket creation, simulated dispatch and repair, customer follow-up, and service-to-sales handoff — then exposes the engineering behind the agents through **Simple Mode / Engineering Mode** and an **Evaluation Lab**.
 
-Engineering Mode makes the voice workflow inspectable, showing how a customer conversation becomes structured actions, tool calls, business-rule decisions, persisted service data, and downstream follow-up. The QA Lab turns real conversation failures into repeatable regression tests against the live ElevenLabs agents, including reply validation, tool-call validation, emergency classification, billing behavior, off-topic handling, sequencing, and multi-agent identity checks.
+Engineering Mode makes the voice workflow inspectable: where the call is right now, each tool call timed, and ElevenLabs' own turn-by-turn timings after the call. The caller's words are never shown.
 
-This project demonstrates the full loop: **voice interaction → operational workflow → evaluation → regression testing → improvement.**
+The **Evaluation Lab** measures how well the agents do, from what really happened:
+- a **scorecard** that keeps tests and real calls apart: emergencies escalated, priority vs. the rules, tool calls and handoffs that worked, calls completed, AI-judged checks, response time, and ElevenLabs' price per call, each number shown with the sample it's based on;
+- **16 regression tests** across three agents, run against the live ElevenLabs agents three times each;
+- a **fixes log** of 11 real problems: why each happened, what changed, and whether the fix still holds in the latest runs;
+- **failure injection** that replays known failures through the real server code in a sandbox.
 
-`AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Tool Calling` `FastAPI` `Supabase` `Service Workflow`
+Two new tests failed on their first run: a caller who wouldn't give a name was refused help (0 of 3 runs passed), and a burning smell from the alarm panel didn't always get "call 911" (2 of 3). After fixing the agent's instructions and the server, all 13 of the front-desk agent's tests passed, 39 of 39 runs.
+
+This project demonstrates the full loop: **voice interaction → operational workflow → measurement → failure → fix → retest.**
+
+[Try the live demo](https://nightshift-dispatch.vercel.app/demo) · [See the Evaluation Lab](https://nightshift-dispatch.vercel.app/lab)
+
+`AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Observability`
 
 ### 🔀 CrossCheck
 **Multi-model AI review and reconciliation**
