@@ -74,12 +74,14 @@ This project demonstrates the full loop: **voice interaction → operational wor
 
 `AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Observability`
 
-### 🔀 CrossCheck
-**Multi-model AI review and reconciliation**
+### 🔥 WeldMate
+**Welding learning and field companion**
 
-Two AI models independently answer the same question, review each other’s response, challenge omissions, and reconcile the results into a structured final report showing agreements, disagreements, confidence, and open questions.
+Brings welding calculators, reference material, and practice into one mobile-first tool: heat-input, fillet, V-groove/filler, carbon-equivalent, and conversion calculators, plus an eight-section learning path, knowledge checks, weld-symbol and position practice, visual-inspection training, WPS practice cards, and instructor/practice check-offs. Built with AI-assisted development using Google Gemini.
 
-`Anthropic API` `OpenAI API` `Next.js` `TypeScript`
+[Open WeldMate](https://ky-gray-portfolio.vercel.app/weldmate)
+
+`Learning Tools` `Field Reference` `Mobile-first` `JavaScript` `Local Storage` `AI-assisted Development`
 
 ### 🎮 Last Light Outpost
 **Browser-based zombie base-defense game**
