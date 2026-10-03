@@ -88,6 +88,8 @@ Brings welding calculators, reference material, and practice into one mobile-fir
 
 A browser game with progressive waves, base building, upgrades, multiple maps, commanders, missions, leaderboards, cloud saves, and adaptive AI difficulty.
 
+[Play Last Light Outpost](https://last-outpost-standing.vercel.app/)
+
 `Game Systems` `AI-assisted Development` `State Management` `Progressive Gameplay`
 
 ---
