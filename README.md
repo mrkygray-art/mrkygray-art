@@ -20,12 +20,16 @@ My approach: **understand the real workflow → map the problem → build the so
 
 Keeps technical opportunities, dependencies, RFP/InfoSec work, deadlines, demos, validation, and next actions visible from discovery through handoff.
 
+[Read the case study](https://ky-gray-portfolio.vercel.app/#se-command-center) · [Open the app](https://se-command-center-opal.vercel.app/) (sign-in required)
+
 `Solutions Engineering` `Workflow` `Opportunity Management` `Technical Discovery`
 
 ### 🛡️ SightFlow
 **Physical-security field survey and system-design workspace**
 
 Carries security projects from field survey through equipment planning, controller and device mapping, cable requirements, BOM creation, licensing, and installer handoff documentation.
+
+[Read the case study](https://ky-gray-portfolio.vercel.app/#sightflow) · [Open the app](https://sightflow-suite.vercel.app/) (sign-in required)
 
 `Physical Security` `Access Control` `CCTV` `Intrusion` `BOM` `Field Engineering`
 
