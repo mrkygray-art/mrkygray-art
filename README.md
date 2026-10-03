@@ -49,6 +49,8 @@ A field tech starts a job, photographs each stop, and talks. PicTalk keeps the p
 
 This project demonstrates the full loop: **field capture → offline sync → speech-to-text → AI summary → a measurable pipeline.**
 
+[Try the live app](https://pictalk-6cbff.web.app) · [View the code](https://github.com/mrkygray-art/pictalk)
+
 `React` `Firebase` `Offline-first (IndexedDB)` `Cloud Functions` `Deepgram` `Live Streaming` `Claude API` `Observability`
 
 ### 🌙 NightAgent
@@ -68,7 +70,7 @@ Two new tests failed on their first run: a caller who wouldn't give a name was r
 
 This project demonstrates the full loop: **voice interaction → operational workflow → measurement → failure → fix → retest.**
 
-[Try the live demo](https://nightshift-dispatch.vercel.app/demo) · [See the Evaluation Lab](https://nightshift-dispatch.vercel.app/lab)
+[Try the live demo](https://nightshift-dispatch.vercel.app/demo) · [See the Evaluation Lab](https://nightshift-dispatch.vercel.app/lab) · [View the code](https://github.com/mrkygray-art/nightagent)
 
 `AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Observability`
 
