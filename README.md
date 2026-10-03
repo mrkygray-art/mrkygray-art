@@ -37,11 +37,19 @@ Built around missed-call intake, lead management, customer conversations, quotes
 `SaaS` `Multi-tenant` `Contractor Operations` `CRM` `Supabase`
 
 ### 📸 PicTalk
-**Offline-first photo + voice field capture**
+**Offline-first photo + voice field capture with a built-in Engineering Mode**
 
-A field worker starts a job, photographs each stop, records voice notes, and keeps the photo, recording, and transcript together. Notes sync to the cloud and can become a reviewable AI-generated job summary and PDF report.
+A field tech starts a job, photographs each stop, and talks. PicTalk keeps the photo, recording, and transcript together. Stops save to the phone first and sync when signal returns, so it keeps working in basements and dead zones. Deepgram transcribes the voice notes using a security-trade vocabulary. Wrap-up notes show words live while the tech talks, through a short-lived token, so the API key never reaches the phone. A finished job becomes a reviewable AI summary drafted by Claude, with every action item tied to the stop it came from, and a PDF report.
 
-`React` `Firebase` `Deepgram` `Claude API`
+**Engineering Mode** is off by default, so field techs never see it. It makes the offline-first pipeline visible:
+- what's waiting on the phone, upload retries and errors, and the next automatic sync;
+- real timings for each stop: upload per file, then transcription split into audio download and Deepgram time;
+- live-words connection speed;
+- each AI summary's time, attempts, and tokens.
+
+This project demonstrates the full loop: **field capture → offline sync → speech-to-text → AI summary → a measurable pipeline.**
+
+`React` `Firebase` `Offline-first (IndexedDB)` `Cloud Functions` `Deepgram` `Live Streaming` `Claude API` `Observability`
 
 ### 🌙 NightAgent
 **AI voice service orchestration + agent QA engineering**
