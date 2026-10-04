@@ -71,7 +71,8 @@ The **Evaluation Lab** measures how well the agents do, from what really happene
 - **21 regression tests** across three agents, run against the live ElevenLabs agents three times each, including **five where a caller tries to trick the agent** (fake "system notices", "ignore your instructions", pressure to escalate, asking for alarm codes or another customer's details);
 - **voice tests with real audio**: a scripted caller streams recorded speech to the live agent in noise and over a simulated phone line, measuring phone numbers and names heard exactly, talking over the agent, going quiet, and how long the caller waits;
 - a **fixes log** of 14 real problems: why each happened, what changed, and whether the fix still holds in the latest runs;
-- **failure injection** that replays known failures through the real server code in a sandbox.
+- **failure injection** that replays known failures through the real server code in a sandbox;
+- **[Jargon Bench](https://github.com/mrkygray-art/nightagent/tree/main/bench)**, a speech-to-text benchmark on security trade terms: with keyterm boosting, jargon heard correctly on recorded speech rose from 62.1% to 89.7% (Deepgram) and from 79.3% to 95.4% (ElevenLabs), in runs on October 4, 2026.
 
 New tests keep catching real problems. A caller who wouldn't give a name was refused help (0 of 3 runs passed), and a burning smell from the alarm panel didn't always get "call 911" (2 of 3). In the trick tests, the agent once announced a ticket without creating it; fixing that and re-running every test caught a second problem, a fake "system notice" that got the agent to page the technician, which a new guardrail closed. On real audio, every phone number came through exactly, and in a loud café one caller's name was misheard.
 
