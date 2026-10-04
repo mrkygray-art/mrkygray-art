@@ -45,7 +45,7 @@ Built around missed-call intake, lead management, customer conversations, quotes
 ### 📸 PicTalk
 **Offline-first photo + voice field capture, with Engineering Mode and an Evaluation Lab**
 
-A field tech starts a job, photographs each stop, and talks. PicTalk keeps the photo, recording, and transcript together. Stops save to the phone first and sync when signal returns, so it keeps working in basements and dead zones. Deepgram transcribes the voice notes using a security-trade vocabulary. Wrap-up notes show words live while the tech talks, through a short-lived token, so the API key never reaches the phone. A finished job becomes a reviewable AI summary drafted by Claude, with every action item tied to the stop it came from, and a PDF report.
+A field tech starts a job, photographs each stop, and talks. PicTalk keeps the photo, recording, and transcript together. Install it on your phone's home screen (Chrome, Firefox, or DuckDuckGo) and it opens and works with no signal: start and end jobs, take photos, record voice notes, and save stops. Everything waits on the phone, and when signal returns PicTalk uploads it and transcribes the voice notes automatically, with nothing to tap. Deepgram transcribes the voice notes using a security-trade vocabulary. Wrap-up notes show words live while the tech talks, through a short-lived token, so the API key never reaches the phone. A finished job becomes a reviewable AI summary drafted by Claude, with every action item tied to the stop it came from, and a PDF report.
 
 **Engineering Mode** is off by default, so field techs never see it. It makes the offline-first pipeline visible:
 - what's waiting on the phone, upload retries and errors, and the next automatic sync;
@@ -64,7 +64,7 @@ This project demonstrates the full loop: **field capture → offline sync → sp
 ### 🌙 NightAgent
 **AI voice service orchestration + agent evaluation**
 
-NightAgent goes beyond a voice-agent demo. It handles after-hours service intake, triage, ticket creation, simulated dispatch and repair, customer follow-up, and service-to-sales handoff — then exposes the engineering behind the agents through **Simple Mode / Engineering Mode** and an **Evaluation Lab**.
+NightAgent goes beyond a voice-agent demo. It handles after-hours service intake, triage, ticket creation, simulated dispatch and repair, customer follow-up, and service-to-sales handoff — then exposes the engineering behind the agents through **Simple Mode / Engineering Mode** and an **Evaluation Lab**. It can be added to a phone's home screen from Chrome, Firefox, or DuckDuckGo and opens like an app.
 
 Engineering Mode makes the voice workflow inspectable: where the call is right now, each tool call timed, and ElevenLabs' own turn-by-turn timings after the call. The caller's words are never shown.
 
