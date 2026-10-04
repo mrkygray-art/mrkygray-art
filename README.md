@@ -43,7 +43,7 @@ Built around missed-call intake, lead management, customer conversations, quotes
 `SaaS` `Multi-tenant` `Contractor Operations` `CRM` `Supabase`
 
 ### 📸 PicTalk
-**Offline-first photo + voice field capture with a built-in Engineering Mode**
+**Offline-first photo + voice field capture, with Engineering Mode and an Evaluation Lab**
 
 A field tech starts a job, photographs each stop, and talks. PicTalk keeps the photo, recording, and transcript together. Stops save to the phone first and sync when signal returns, so it keeps working in basements and dead zones. Deepgram transcribes the voice notes using a security-trade vocabulary. Wrap-up notes show words live while the tech talks, through a short-lived token, so the API key never reaches the phone. A finished job becomes a reviewable AI summary drafted by Claude, with every action item tied to the stop it came from, and a PDF report.
 
@@ -53,11 +53,13 @@ A field tech starts a job, photographs each stop, and talks. PicTalk keeps the p
 - live-words connection speed;
 - each AI summary's time, attempts, and tokens.
 
-This project demonstrates the full loop: **field capture → offline sync → speech-to-text → AI summary → a measurable pipeline.**
+The **Evaluation Lab** proves the offline claims instead of asserting them. A simulator drives the real app in a phone-sized browser and cuts the signal at the worst moments: mid-recording, mid-upload, mid-sentence of live words, app closed while offline. It then checks that every recording still reaches the cloud whole and gets written down. Its first run caught three problems, two of which could reach real users (live words dropping mid-sentence could lose words, and the PDF tools weren't saved for offline use). All three are fixed, and all 21 runs now pass (October 2026).
 
-[Try the live app](https://pictalk-6cbff.web.app) · [View the code](https://github.com/mrkygray-art/pictalk)
+This project demonstrates the full loop: **field capture → offline sync → speech-to-text → AI summary → a measurable, tested pipeline.**
 
-`React` `Firebase` `Offline-first (IndexedDB)` `Cloud Functions` `Deepgram` `Live Streaming` `Claude API` `Observability`
+[Try the live app](https://pictalk-6cbff.web.app) · [Evaluation Lab](https://pictalk-6cbff.web.app/lab) · [View the code](https://github.com/mrkygray-art/pictalk)
+
+`React` `Firebase` `Offline-first (IndexedDB)` `Installable PWA` `Cloud Functions` `Deepgram` `Live Streaming` `Claude API` `Observability` `Evaluation Lab`
 
 ### 🌙 NightAgent
 **AI voice service orchestration + agent evaluation**
