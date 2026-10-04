@@ -18,9 +18,9 @@ My approach: **understand the real workflow → map the problem → build the so
 ### 🧭 SE Command Center
 **Solutions Engineering opportunity workspace**
 
-Keeps technical opportunities, dependencies, RFP/InfoSec work, deadlines, demos, validation, and next actions visible from discovery through handoff.
+Keeps technical opportunities, dependencies, RFP/InfoSec work, deadlines, demos, validation, and next actions visible from discovery through handoff. An Impact view connects logged SE hours to the pipeline they support, and **Suggest next step** has Claude draft an opportunity's next action for the SE to review and approve.
 
-[Read the case study](https://ky-gray-portfolio.vercel.app/#se-command-center) · [Open the app](https://se-command-center-opal.vercel.app/) (sign-in required)
+**[▶ Launch the interactive demo](https://se-command-center-opal.vercel.app/demo)** (no sign-in, guided tour, fictional data) · [Read the case study](https://ky-gray-portfolio.vercel.app/#se-command-center)
 
 `Solutions Engineering` `Workflow` `Opportunity Management` `Technical Discovery`
 
