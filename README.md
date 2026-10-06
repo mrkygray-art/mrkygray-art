@@ -2,7 +2,7 @@
 
 ### Solutions Engineer · Security Technology · AI-Enabled Solutions
 
-I’m a Solutions Engineer with 20+ years across IT and security technology. I build working software around problems I’ve seen in the field — from solutions-engineering workflows and physical-security design to field capture, contractor operations, and AI voice agents.
+I’m a Solutions Engineer with 20+ years across IT and security technology. I build working software around problems I’ve seen in the field — from solutions-engineering workflows and physical-security design to field capture, contractor operations, AI voice agents, and an AI companion for everyday users.
 
 My approach: **understand the real workflow → map the problem → build the solution → ship it → improve it through use.**
 
@@ -83,6 +83,17 @@ This project demonstrates the full loop: **voice interaction → operational wor
 [Try the live demo](https://nightshift-dispatch.vercel.app/demo) · [See the Evaluation Lab](https://nightshift-dispatch.vercel.app/lab) · [View the code](https://github.com/mrkygray-art/nightagent)
 
 `AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Voice Testing` `Prompt-Injection Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Observability`
+
+### 🔵 Bluey
+**An AI companion that helps everyday people get better results from AI, without learning prompt engineering**
+
+Bluey is a friendly blue orb for people who don't think of themselves as AI users. You type or talk in plain language. Before every reply, a structured "brain" step decides how to act: **DO** (the request is clear, so just do it), **DISCOVER** (one missing detail truly blocks a useful answer, so ask one plain question), or **GROW** (help now, then mention a better way of working). It also tracks the current goal so an old topic doesn't take over a new one, and picks an initiative level from "just answer" to "propose an improvement", which has to be earned with real evidence. Users can add up to five photos, hear replies spoken aloud, and have Bluey create PDF, Word, or Excel files. The OpenAI key stays in Vercel serverless functions, and every reply comes back as strict JSON.
+
+The **Brain Lab** tests the brain like a product: 15 regression conversations run through the real chat endpoint, including topic changes, a "continue" turn, a recurring weekly task, and ordinary tasks that must not turn into business ideas. Each reply is checked for the mode, the initiative taken, and the number of questions asked, and generic help-desk phrasing and repeated answers are flagged. Built with ChatGPT. An alpha in active testing.
+
+[Talk to Bluey](https://bluey-ai-friend.vercel.app/) · [Read the case study](https://ky-gray-portfolio.vercel.app/#bluey) · [View the code](https://github.com/mrkygray-art/bluey-ai-friend)
+
+`OpenAI API` `Structured Output` `Conversational UX` `Speech-to-Text` `Text-to-Speech` `LLM Evaluation` `Regression Testing` `Vercel`
 
 ### 🔥 WeldMate
 **Welding learning and field companion**
