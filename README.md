@@ -89,11 +89,15 @@ This project demonstrates the full loop: **voice interaction → operational wor
 
 Bluey is a friendly blue orb for people who don't think of themselves as AI users. You type or talk in plain language. Before every reply, a structured "brain" step decides how to act: **DO** (the request is clear, so just do it), **DISCOVER** (one missing detail truly blocks a useful answer, so ask one plain question), or **GROW** (help now, then mention a better way of working). It also tracks the current goal so an old topic doesn't take over a new one, and picks an initiative level from "just answer" to "propose an improvement", which has to be earned with real evidence. Users can add up to five photos, hear replies spoken aloud, and have Bluey create PDF, Word, or Excel files. The OpenAI key stays in Vercel serverless functions, and every reply comes back as strict JSON.
 
-The **Brain Lab** tests the brain like a product: 15 regression conversations run through the real chat endpoint, including topic changes, a "continue" turn, a recurring weekly task, and ordinary tasks that must not turn into business ideas. Each reply is checked for the mode, the initiative taken, and the number of questions asked, and generic help-desk phrasing and repeated answers are flagged. Built with ChatGPT. An alpha in active testing.
+He's designed as a character, not a help desk: a backstory (birthday July 7, a marble collection, a glowing pixel called Pixel One, printers as his comic nemesis), gentle humor shown only when it fits, and a rotating style nudge so he doesn't sound the same twice.
+
+The **Brain Lab** tests the brain like a product: 15 regression conversations in the live app, grown to **39 permanent release-gate tests** on the beta branch (including 20 real-human scenarios: corrections, frustration, references back, changing minds). Each reply is checked for the mode, the initiative taken, and the number of questions asked, and generic help-desk phrasing and repeated answers are flagged. I put in hours of regression testing, plus hands-on troubleshooting on desktop and Android across Chrome, Firefox, and DuckDuckGo. In beta: **memory in a Supabase database** that recalls only what's relevant and forgets on request, waiting on sign-in before it goes live.
+
+Over a week of work with ChatGPT, from intent and goals to decisions, personality, API keys, and memory, with a frozen live alpha while new versions advanced on separate branches. An alpha in active testing.
 
 [Talk to Bluey](https://bluey-ai-friend.vercel.app/) · [Read the case study](https://ky-gray-portfolio.vercel.app/#bluey) · [View the code](https://github.com/mrkygray-art/bluey-ai-friend)
 
-`OpenAI API` `Structured Output` `Conversational UX` `Speech-to-Text` `Text-to-Speech` `LLM Evaluation` `Regression Testing` `Vercel`
+`OpenAI API` `Structured Output` `Conversational UX` `Speech-to-Text` `Text-to-Speech` `LLM Evaluation` `Regression Testing` `Cross-browser Testing` `Supabase` `Vercel`
 
 ### 🔥 WeldMate
 **Welding learning and field companion**
