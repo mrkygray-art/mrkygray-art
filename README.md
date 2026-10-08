@@ -45,7 +45,7 @@ Built around missed-call intake, lead management, customer conversations, quotes
 ### 📸 PicTalk
 **Offline-first photo + voice field capture, with Engineering Mode and an Evaluation Lab**
 
-A field tech starts a job, photographs each stop, and talks. PicTalk keeps the photo, recording, and transcript together. Install it on your phone's home screen (Chrome, Firefox, or DuckDuckGo) and it opens and works with no signal: start and end jobs, take photos, record voice notes, and save stops. Everything waits on the phone, and when signal returns PicTalk uploads it and transcribes the voice notes automatically, with nothing to tap. Deepgram transcribes the voice notes using a security-trade vocabulary. Wrap-up notes show words live while the tech talks, through a short-lived token, so the API key never reaches the phone. A finished job becomes a reviewable AI summary drafted by Claude, with every action item tied to the stop it came from, and a PDF report.
+A field tech starts a job, photographs each stop, and talks. PicTalk keeps the photo, recording, and transcript together. Install it on your phone's home screen (Chrome, Firefox, or DuckDuckGo) and it opens and works with no signal: start and end jobs, take photos, record voice notes, and save stops. Everything waits on the phone, and when signal returns PicTalk uploads it and transcribes the voice notes automatically, with nothing to tap. Deepgram transcribes the voice notes using a security-trade vocabulary. Wrap-up notes show words live while the tech talks, through a short-lived token, so the API key never reaches the phone. A **Describe photo** button has Claude describe a stop's photo: what it shows, any readable labels and model numbers, and visible condition. The description sits under the transcript with Edit and Delete so the tech can check what the AI saw, and with no signal it's written automatically once the phone is back online. A finished job becomes a reviewable AI summary drafted by Claude from the transcripts, wrap-up notes, and photo descriptions, with every action item tied to the stop it came from, and a PDF report.
 
 **Engineering Mode** is off by default, so field techs never see it. It makes the offline-first pipeline visible:
 - what's waiting on the phone, upload retries and errors, and the next automatic sync;
@@ -59,7 +59,7 @@ This project demonstrates the full loop: **field capture → offline sync → sp
 
 [Try the live app](https://pictalk-6cbff.web.app) · [Evaluation Lab](https://pictalk-6cbff.web.app/lab) · [View the code](https://github.com/mrkygray-art/pictalk)
 
-`React` `Firebase` `Offline-first (IndexedDB)` `Installable PWA` `Cloud Functions` `Deepgram` `Live Streaming` `Claude API` `Observability` `Evaluation Lab`
+`React` `Firebase` `Offline-first (IndexedDB)` `Installable PWA` `Cloud Functions` `Deepgram` `Live Streaming` `Claude API` `Claude Vision` `Observability` `Evaluation Lab`
 
 ### 🌙 NightAgent
 **AI voice service orchestration + agent evaluation**
