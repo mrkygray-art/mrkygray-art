@@ -43,9 +43,11 @@ Built around missed-call intake, lead management, customer conversations, quotes
 `SaaS` `Multi-tenant` `Contractor Operations` `CRM` `Supabase`
 
 ### 📸 PicTalk
-**Offline-first photo + voice field capture, with Engineering Mode and an Evaluation Lab**
+**Offline-first photo + voice field capture that ends in a reviewed work order and quote, with Engineering Mode and an Evaluation Lab**
 
 A field tech starts a job, photographs each stop, and talks. PicTalk keeps the photo, recording, and transcript together. Install it on your phone's home screen (Chrome, Firefox, or DuckDuckGo) and it opens and works with no signal: start and end jobs, take photos, record voice notes, and save stops. Everything waits on the phone, and when signal returns PicTalk uploads it and transcribes the voice notes automatically, with nothing to tap. Deepgram transcribes the voice notes using a security-trade vocabulary. Wrap-up notes show words live while the tech talks, through a short-lived token, so the API key never reaches the phone. A **Describe photo** button has Claude describe a stop's photo: what it shows, any readable labels and model numbers, and visible condition. The description sits under the transcript with Edit and Delete so the tech can check what the AI saw, and with no signal it's written automatically once the phone is back online. A finished job becomes a reviewable AI summary drafted by Claude from the transcripts, wrap-up notes, and photo descriptions, with every action item tied to the stop it came from, and a PDF report.
+
+**Piccolo**, a second pane, takes a finished job to a quote. Claude drafts a work order, parts list, and quote from the job's photos and voice notes, with guardrails enforced in code: every line links to the stop it came from, part numbers nobody said are marked "Verify", and prices are never invented. The estimator edits and finalizes numbered versions and exports PDF, CSV, or JSON. Companies invite estimators, field techs, and installers; field roles get the work order without prices, enforced by the security rules. An admin console tracks jobs from captured to won, and later drafts learn each company's own wording, part numbers, and prices from its past quotes.
 
 **Engineering Mode** is off by default, so field techs never see it. It makes the offline-first pipeline visible:
 - what's waiting on the phone, upload retries and errors, and the next automatic sync;
@@ -55,7 +57,7 @@ A field tech starts a job, photographs each stop, and talks. PicTalk keeps the p
 
 The **Evaluation Lab** proves the offline claims instead of asserting them. A simulator drives the real app in a phone-sized browser and cuts the signal at the worst moments: mid-recording, mid-upload, mid-sentence of live words, app closed while offline. It then checks that every recording still reaches the cloud whole and gets written down. Its first run caught three problems, two of which could reach real users (live words dropping mid-sentence could lose words, and the PDF tools weren't saved for offline use). All three are fixed, and all 21 runs now pass (October 2026).
 
-This project demonstrates the full loop: **field capture → offline sync → speech-to-text → AI summary → a measurable, tested pipeline.**
+This project demonstrates the full loop: **field capture → offline sync → speech-to-text → AI summary → work order and quote → a measurable, tested pipeline.**
 
 [Try the live app](https://pictalk-6cbff.web.app) · [Evaluation Lab](https://pictalk-6cbff.web.app/lab) · [View the code](https://github.com/mrkygray-art/pictalk)
 
