@@ -49,6 +49,12 @@ A field tech starts a job, photographs each stop, and talks. PicTalk keeps the p
 
 **Piccolo**, a second pane, takes a finished job to a quote. Claude drafts a work order, parts list, and quote from the job's photos and voice notes, with guardrails enforced in code: every line links to the stop it came from, part numbers nobody said are marked "Verify", and prices are never invented. The estimator edits and finalizes numbered versions and exports PDF, CSV, or JSON. Companies invite estimators, field techs, and installers; field roles get the work order without prices, enforced by the security rules. An admin console tracks jobs from captured to won, and later drafts learn each company's own wording, part numbers, and prices from its past quotes.
 
+<p>
+  <img src="https://raw.githubusercontent.com/mrkygray-art/pictalk/master/docs/piccolo-workorder.webp" alt="Piccolo work order with tasks linked to their stops" width="190">
+  <img src="https://raw.githubusercontent.com/mrkygray-art/pictalk/master/docs/piccolo-parts.webp" alt="Piccolo parts list quoting the tech's words" width="190">
+  <img src="https://raw.githubusercontent.com/mrkygray-art/pictalk/master/docs/piccolo-quote.webp" alt="Piccolo quote with markup, tax, and total" width="190">
+</p>
+
 **Engineering Mode** is off by default, so field techs never see it. It makes the offline-first pipeline visible:
 - what's waiting on the phone, upload retries and errors, and the next automatic sync;
 - real timings for each stop: upload per file, then transcription split into audio download and Deepgram time;
