@@ -2,7 +2,7 @@
 
 ### Solutions Engineer · Security Technology · AI-Enabled Solutions
 
-I’m a Solutions Engineer with 20+ years across IT and security technology. I build working software around problems I’ve seen in the field — from solutions-engineering workflows and physical-security design to field capture, contractor operations, AI voice agents, and an AI companion for everyday users.
+I’m a Solutions Engineer with 20+ years across IT and security technology. I build working software around problems I’ve seen in the field — from solutions-engineering workflows and physical-security design to field capture, contractor operations, AI voice agents, a Windows diagnostic assistant, and an AI companion for everyday users.
 
 My approach: **understand the real workflow → map the problem → build the solution → ship it → improve it through use.**
 
@@ -91,6 +91,22 @@ This project demonstrates the full loop: **voice interaction → operational wor
 [Try the live demo](https://nightshift-dispatch.vercel.app/demo) · [See the Evaluation Lab](https://nightshift-dispatch.vercel.app/lab) · [View the code](https://github.com/mrkygray-art/nightagent)
 
 `AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Voice Testing` `Prompt-Injection Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Observability`
+
+### 🩺 PC Medic
+**An installable Windows assistant that checks the real computer before it answers**
+
+Ask in plain English ("my computer is slow", "can I add more RAM?", "how is my battery?") and PC Medic answers from the actual hardware, Windows logs, update and crash history, and live performance numbers instead of generic advice. When it opens, a quick read-only check gives a one-line verdict and five tiles: speed, storage, battery, updates, and stability. **Home mode** explains everything in plain words with step-by-step fixes. **Technician mode** shows the raw values, error codes, and event IDs, plus every Windows tool. Guided troubleshooting measures the problem, suggests one fix and opens the right Windows page, then measures again to compare and saves the outcome. PC Medic never changes anything itself.
+
+AI only when it's needed. Questions the built-in engine can't answer go to Claude, which runs read-only checks and cites its web sources, or to ChatGPT, and every answer is labeled with who answered it. Nothing leaves the PC until the user approves, and serial numbers, user names, IP addresses, and file names are never sent. The local server answers only the Windows account that started it, and refuses requests from websites. It ships as a per-user Windows installer with in-app update checks against GitHub Releases. Started with ChatGPT and continued with Claude Code, with 150+ automated tests, and install, upgrade, and uninstall tested on real hardware.
+
+<p>
+  <img src="https://raw.githubusercontent.com/mrkygray-art/pc-medic/main/docs/pcmedic-today.webp" alt="PC Medic Today screen in Home mode with five status tiles" width="380">
+  <img src="https://raw.githubusercontent.com/mrkygray-art/pc-medic/main/docs/pcmedic-technician.webp" alt="PC Medic Technician mode with raw values, error codes and event IDs" width="380">
+</p>
+
+[Download for Windows](https://github.com/mrkygray-art/pc-medic/releases/latest) · [Read the case study](https://ky-gray-portfolio.vercel.app/#pc-medic) · [View the code](https://github.com/mrkygray-art/pc-medic)
+
+`Python` `Windows` `PowerShell` `Claude API` `Tool Use` `Web Search` `OpenAI API` `Privacy by Design` `Local Security` `PyInstaller` `Inno Setup` `Claude Code`
 
 ### 🔵 Bluey
 **An AI companion that helps everyday people get better results from AI, without learning prompt engineering**
