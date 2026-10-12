@@ -108,6 +108,23 @@ AI only when it's needed. Questions the built-in engine can't answer go to Claud
 
 `Python` `Windows` `PowerShell` `Claude API` `Tool Use` `Web Search` `OpenAI API` `Privacy by Design` `Local Security` `PyInstaller` `Inno Setup` `Claude Code`
 
+### 🏢 PropertyIQ
+**A self-hosted AI analyst and lending workbench for commercial real estate, with no cloud AI service**
+
+Everything runs on one machine: a local Qwen3 model served by Ollama, a FastAPI backend, a Next.js interface, and PostgreSQL in Docker. All data is synthetic. **The model never does the math.** Code calculates NOI, trailing-12-month totals, budget variance, and occupancy for 55 synthetic properties and decides which are flagged; the model receives only the verified figures and explains them. Every dollar amount and percentage it writes is checked against those figures, and every answer links to a calculation trail with formulas and source record IDs.
+
+It has grown into a lending workbench. **Loan screening** calculates DSCR, LTV, debt yield, and break-even occupancy against a lender's guidelines, with stress tests, and exports a PDF and an Excel workbook with live formulas. **Document intake** reads a borrower's rent roll and T-12 (Excel, CSV, or scanned PDF with local OCR), shows the source of every row, and drops tenant names as the file is read. **Red flags** cover 13 document checks, a market check, and California rules such as the Prop 13 tax reset and rent control, each with its official source. An **underwriting comparison** puts the borrower's numbers next to the lender's, with a reason for every adjustment. A **debt dashboard** covers 46 synthetic loans and their covenants, and an **AI Engineering Lab** shows how each answer was made without storing the question or the answer text.
+
+Built with Claude Code from my own brief and specifications, with 279 automated tests; every exported workbook is recalculated in OpenOffice and must match the app. It's a prototype: network isolation, production sign-in, and role-based access are still to be tested and documented.
+
+<p>
+  <img src="https://ky-gray-portfolio.vercel.app/assets/propertyiq-portfolio-overview.webp" alt="PropertyIQ portfolio overview with 55 synthetic properties, 4 flagged, and the Ask PropertyIQ chat panel" width="760">
+</p>
+
+[Read the case study](https://ky-gray-portfolio.vercel.app/propertyiq)
+
+`Self-hosted LLM` `Ollama` `Qwen3` `PostgreSQL` `Docker` `FastAPI` `Next.js` `Financial Analytics` `Loan Underwriting` `Local OCR` `Data Sovereignty` `Claude Code`
+
 ### 🔵 Bluey
 **An AI companion that helps everyday people get better results from AI, without learning prompt engineering**
 
@@ -168,13 +185,13 @@ I deploy working applications, test real workflows, identify friction, convert f
 ## Technology
 
 **AI & Voice**  
-`Claude` `ChatGPT` `Gemini` `Claude Code` `Claude API` `OpenAI API` `ElevenLabs` `Deepgram` `Agent Testing` `LLM Evaluation`
+`Claude` `ChatGPT` `Gemini` `Claude Code` `Claude API` `OpenAI API` `Ollama` `Qwen3` `ElevenLabs` `Deepgram` `Agent Testing` `LLM Evaluation`
 
 **Application Development**  
 `Next.js` `React` `JavaScript` `TypeScript` `Python` `FastAPI` `SQL`
 
 **Cloud & Platform**  
-`Supabase` `Firebase` `GitHub` `Vercel` `Twilio`
+`Supabase` `PostgreSQL` `Docker` `Firebase` `GitHub` `Vercel` `Twilio`
 
 **Security & Solutions Engineering**  
 `Access Control` `CCTV / VMS` `Intrusion` `Intercom` `Mercury` `Cloud Security Platforms` `Identity / SSO` `REST APIs` `Technical Discovery` `Demos` `RFP / InfoSec` `System Design` `BOM` `Technical Validation`
