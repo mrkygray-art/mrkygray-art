@@ -121,7 +121,9 @@ Built with Claude Code from my own brief and specifications, with 279 automated 
   <img src="https://ky-gray-portfolio.vercel.app/assets/propertyiq-portfolio-overview.webp" alt="PropertyIQ portfolio overview with 55 synthetic properties, 4 flagged, and the Ask PropertyIQ chat panel" width="760">
 </p>
 
-[Read the case study](https://ky-gray-portfolio.vercel.app/propertyiq) · [View the code](https://github.com/mrkygray-art/propertyiq)
+[Read the case study](https://ky-gray-portfolio.vercel.app/propertyiq) · [Try the simulator demo](https://ky-gray-portfolio.vercel.app/propertyiq-demo) · [View the code](https://github.com/mrkygray-art/propertyiq)
+
+The simulator recreates the main pages in your browser with synthetic data; its chat is scripted, while the real app runs only on a local computer.
 
 `Self-hosted LLM` `Ollama` `Qwen3` `PostgreSQL` `Docker` `FastAPI` `Next.js` `Financial Analytics` `Loan Underwriting` `Local OCR` `Data Sovereignty` `Claude Code`
 
