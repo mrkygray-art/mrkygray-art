@@ -29,7 +29,7 @@ Keeps technical opportunities, dependencies, RFP/InfoSec work, deadlines, demos,
 
 Works with Procore: a foreman takes a photo and says what's wrong, Claude drafts a Procore **Observation** or **Punch Item** from the project's own lists, and one tap creates it in Procore under the foreman's own sign-in, with the photo and voice note attached. The crew then follows it up in project messages (To / CC, transcribed voice notes, AI-found to-dos, one-tap replies like **On it** and **Done**), and Done moves the Procore record to Ready for Review. Project photos browses and adds jobsite photos in Procore's own Photos tool, filing each one in that day's album, even with no signal. New: a foreman walks a Procore **inspection** one question at a time with big Pass / Fail / N/A buttons, by tap or by voice, and a Fail becomes an Observation in one tap, linked to the failed item. It's a fork of PicTalk, tested so far only in Procore's developer sandbox with fictional people and projects.
 
-[Read the case study](https://ky-gray-portfolio.vercel.app/#sitesnap) (looping demo + quick tour) · [README and code](https://github.com/mrkygray-art/pictalk/tree/sitesnap)
+[Try the live demo](https://sitesnap-procore.vercel.app/demo) (view only, no sign-in) · [Read the case study](https://ky-gray-portfolio.vercel.app/#sitesnap) · [README and code](https://github.com/mrkygray-art/pictalk/tree/sitesnap)
 
 `Procore API` `OAuth` `Construction` `Claude API` `Deepgram` `Firebase` `PWA`
 
