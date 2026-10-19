@@ -27,7 +27,7 @@ Keeps technical opportunities, dependencies, RFP/InfoSec work, deadlines, demos,
 ### 🏗️ SiteSnap AI *(in development)*
 **Voice + photo to a real Procore record, plus jobsite messaging**
 
-Works with Procore: a foreman takes a photo and says what's wrong, Claude drafts a Procore **Observation** or **Punch Item** from the project's own lists, and one tap creates it in Procore under the foreman's own sign-in, with the photo and voice note attached. The crew then follows it up in project messages (To / CC, transcribed voice notes, AI-found to-dos, one-tap replies like **On it** and **Done**), and Done moves the Procore record to Ready for Review. Project photos browses and adds jobsite photos in Procore's own Photos tool, filing each one in that day's album, even with no signal. A foreman walks a Procore **inspection** one question at a time with big Pass / Fail / N/A buttons, by tap or by voice, and a Fail becomes an Observation in one tap, linked to the failed item. New: **My items** lists the Observations and Punch Items assigned to you, with what's overdue on the home screen, and Mark fixed closes one out with a photo and a few words, moving it to Ready for Review in Procore. It's a fork of PicTalk, tested so far only in Procore's developer sandbox with fictional people and projects.
+Works with Procore: a foreman takes a photo and says what's wrong, Claude drafts a Procore **Observation** or **Punch Item** from the project's own lists, and one tap creates it in Procore under the foreman's own sign-in, with the photo and voice note attached. The crew then follows it up in project messages (To / CC, transcribed voice notes, AI-found to-dos, one-tap replies like **On it** and **Done**), and Done moves the Procore record to Ready for Review. Project photos browses and adds jobsite photos in Procore's own Photos tool, filing each one in that day's album, even with no signal. A foreman walks a Procore **inspection** one question at a time with big Pass / Fail / N/A buttons, by tap or by voice, and a Fail becomes an Observation in one tap, linked to the failed item. New: **My items** lists the Observations and Punch Items assigned to you, with what's overdue on the home screen, and Mark fixed closes one out with a photo and a few words, moving it to Ready for Review in Procore. It's a fork of PicTalk, tested so far only in Procore's developer sandbox with fictional people and projects. A small **Ask** button on the project home opens the SiteSnap Guide, a how-to chatbot, in a panel.
 
 [Try the live demo](https://sitesnap-procore.vercel.app/demo) (view only, no sign-in) · [Read the case study](https://ky-gray-portfolio.vercel.app/#sitesnap) · [README and code](https://github.com/mrkygray-art/pictalk/tree/sitesnap)
 
@@ -117,6 +117,15 @@ AI only when it's needed. Questions the built-in engine can't answer go to Claud
 
 `Python` `Windows` `PowerShell` `Claude API` `Tool Use` `Web Search` `OpenAI API` `Privacy by Design` `Local Security` `PyInstaller` `Inno Setup` `Claude Code`
 
+### 💬 SiteSnap Guide
+**The retrieval chatbot behind SiteSnap's Ask button, built on Cloudflare**
+
+Answers how-to questions about SiteSnap's tiles and workflows only from SiteSnap's own Markdown guide pages. A TypeScript **Cloudflare Worker** embeds the question with **Workers AI**, finds the six closest guide chunks in **Vectorize**, and lets a small open model (Llama 3.2 3B on Workers AI) answer only from those; a weak match gets a plain "I don't know yet" instead of a guess. Every question and whether it was answered goes into **D1**, so unanswered ones show which page to write next. SiteSnap shows it in a sandboxed panel with no referrer, so no user or Procore data reaches it.
+
+[Read the case study](https://ky-gray-portfolio.vercel.app/#sitesnap-guide)
+
+`Cloudflare Workers` `TypeScript` `Workers AI` `Vectorize` `D1` `RAG` `Embeddings` `Wrangler`
+
 ### 🏢 PropertyIQ
 **A self-hosted AI analyst and lending workbench for commercial real estate, with no cloud AI service**
 
@@ -202,7 +211,7 @@ I deploy working applications, test real workflows, identify friction, convert f
 `Next.js` `React` `JavaScript` `TypeScript` `Python` `FastAPI` `SQL`
 
 **Cloud & Platform**  
-`Supabase` `PostgreSQL` `Docker` `Firebase` `GitHub` `Vercel` `Twilio`
+`Supabase` `PostgreSQL` `Docker` `Firebase` `Cloudflare Workers` `GitHub` `Vercel` `Twilio`
 
 **Security & Solutions Engineering**  
 `Access Control` `CCTV / VMS` `Intrusion` `Intercom` `Mercury` `Cloud Security Platforms` `Identity / SSO` `REST APIs` `Technical Discovery` `Demos` `RFP / InfoSec` `System Design` `BOM` `Technical Validation`
