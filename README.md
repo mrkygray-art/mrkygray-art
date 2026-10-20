@@ -36,7 +36,7 @@ Works with Procore: a foreman takes a photo and says what's wrong, Claude drafts
 ### 🛡️ SightFlow
 **Physical-security field survey and system-design workspace**
 
-Carries security projects from field survey through equipment planning, controller and device mapping, cable requirements, BOM creation, licensing, and installer handoff documentation.
+Carries security projects from field survey through equipment planning, controller and device mapping, cable requirements, BOM creation, licensing, and installer handoff documentation. A read-only readiness check runs before every handoff PDF and flags gaps such as cameras with no switch, devices with no location, and blank customer contacts.
 
 [Read the case study](https://ky-gray-portfolio.vercel.app/#sightflow) · [Open the app](https://sightflow-suite.vercel.app/) (sign-in required)
 
