@@ -20,7 +20,7 @@ My approach: **understand the real workflow → map the problem → build the so
 
 Keeps technical opportunities, dependencies, RFP/InfoSec work, deadlines, demos, validation, and next actions visible from discovery through handoff. An Impact view connects logged SE hours to the pipeline they support, and **Suggest next step** has Claude draft an opportunity's next action for the SE to review and approve.
 
-**[▶ Launch the interactive demo](https://se-command-center-opal.vercel.app/demo)** (no sign-in, guided tour, fictional data) · [Read the case study](https://ky-gray-portfolio.vercel.app/#se-command-center)
+**[▶ Open SE Command Center from the portfolio](https://ky-gray-portfolio.vercel.app/#se-command-center)** (the portfolio button opens a demo: no sign-in, guided tour, fictional data)
 
 `Solutions Engineering` `Workflow` `Opportunity Management` `Technical Discovery`
 
