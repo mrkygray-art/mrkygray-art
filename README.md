@@ -81,7 +81,7 @@ This project demonstrates the full loop: **field capture → offline sync → sp
 ### 🌙 NightAgent
 **AI voice service orchestration + agent evaluation**
 
-NightAgent goes beyond a voice-agent demo. It handles after-hours service intake, triage, ticket creation, simulated dispatch and repair, customer follow-up, and service-to-sales handoff — then exposes the engineering behind the agents through **Simple Mode / Engineering Mode** and an **Evaluation Lab**. It can be added to a phone's home screen from Chrome, Firefox, or DuckDuckGo and opens like an app.
+NightAgent goes beyond a voice-agent demo. It handles after-hours service intake, triage, ticket creation, simulated dispatch and repair, customer follow-up, and service-to-sales handoff — then exposes the engineering behind the agents through **Simple Mode / Engineering Mode** and an **Evaluation Lab**. It can be added to a phone's home screen from Chrome, Firefox, or DuckDuckGo and opens like an app. After each call, every new ticket is also logged in **Zendesk** through its API (OAuth client credentials), with the caller, issue, priority, and call summary; if Zendesk is down, the call is still saved.
 
 Engineering Mode makes the voice workflow inspectable: where the call is right now, each tool call timed, and ElevenLabs' own turn-by-turn timings after the call. The caller's words are never shown.
 
@@ -99,7 +99,7 @@ This project demonstrates the full loop: **voice interaction → operational wor
 
 [Try the live demo](https://nightshift-dispatch.vercel.app/demo) · [See the Evaluation Lab](https://nightshift-dispatch.vercel.app/lab) · [View the code](https://github.com/mrkygray-art/nightagent)
 
-`AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Voice Testing` `Prompt-Injection Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Observability`
+`AI Voice` `ElevenLabs` `Agent Evaluation` `Regression Testing` `Voice Testing` `Prompt-Injection Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Zendesk API` `Observability`
 
 ### 🩺 PC Medic
 **An installable Windows assistant that checks the real computer before it answers**
