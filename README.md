@@ -104,6 +104,21 @@ This project demonstrates the full loop: **voice interaction → operational wor
 
 `AI Voice` `ElevenLabs` `Deepgram Voice Agent API` `Agent Evaluation` `Regression Testing` `Voice Testing` `Prompt-Injection Testing` `Failure Injection` `Tool Calling` `FastAPI` `Supabase` `Zendesk API` `Zendesk Apps Framework` `Observability`
 
+### 💳 MeterDemo
+**Usage-based billing for an AI product on Stripe, priced so heavy users stay profitable**
+
+Every AI reply costs money to generate, and output tokens cost about five times more than input. On a flat $49 plan, the sample power customer costs $90.03 a month to serve and pays $49: a **−88% gross margin**. MeterDemo frames it like a customer engagement. A **pricing lab** runs three sample customers' real metered usage through four pricing models (flat, one token price, base fee plus overage, input plus output) and shows revenue, AI cost, Stripe fees, and gross margin for each. The chosen model is live in Stripe: input and output tokens on two **Stripe Billing Meters**, each with a graduated price and a free allowance, found by **lookup key** so pricing changes without a deploy. Every paying customer lands at 47–49% gross margin, and the lab's bills match Stripe's real invoices to the cent.
+
+The live demo runs Stripe **Checkout**, Stripe's **invoice preview** for the customer's estimate, the **Customer Portal**, and signature-verified **webhooks**; the sample customers' paid invoices come from Stripe **test clocks**. Usage reporting guards against **revenue leakage**: retries reuse the same ID so a reply is never billed twice, failures are recorded, and a reconciliation script compares our records with Stripe's meters. Test mode only, with fictional customers. Written up as a [solution brief](https://github.com/mrkygray-art/meterdemo/blob/main/docs/SOLUTION_BRIEF.md) (problem, analysis, workflow, risks, rollout).
+
+<p>
+  <img src="https://raw.githubusercontent.com/mrkygray-art/meterdemo/main/docs/meterdemo-sample.webp" alt="MeterDemo sample customer: usage this month, Stripe's estimate, billed to date, 49% gross margin, and daily input and output tokens" width="760">
+</p>
+
+[Open the pricing lab](https://meterdemo.vercel.app/pricing.html) · [Try the live demo](https://meterdemo.vercel.app) · [View the code](https://github.com/mrkygray-art/meterdemo)
+
+`Stripe Billing` `Billing Meters` `Stripe Checkout` `Customer Portal` `Webhooks` `Test Clocks` `Usage-Based Pricing` `Unit Economics` `Reconciliation` `OpenAI API` `Node.js` `Vercel` `Claude Code`
+
 ### 🩺 PC Medic
 **An installable Windows assistant that checks the real computer before it answers**
 
@@ -223,7 +238,7 @@ I deploy working applications, test real workflows, identify friction, convert f
 `Next.js` `React` `JavaScript` `TypeScript` `Python` `FastAPI` `SQL`
 
 **Cloud & Platform**  
-`Supabase` `PostgreSQL` `Docker` `Firebase` `Cloudflare Workers` `GitHub` `Vercel` `Twilio`
+`Supabase` `PostgreSQL` `Docker` `Firebase` `Cloudflare Workers` `GitHub` `Vercel` `Twilio` `Stripe Billing`
 
 **Security & Solutions Engineering**  
 `Access Control` `CCTV / VMS` `Intrusion` `Intercom` `Mercury` `Cloud Security Platforms` `Identity / SSO` `REST APIs` `Technical Discovery` `Demos` `RFP / InfoSec` `System Design` `BOM` `Technical Validation`
