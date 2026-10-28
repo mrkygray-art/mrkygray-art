@@ -119,6 +119,21 @@ The live demo runs Stripe **Checkout**, Stripe's **invoice preview** for the cus
 
 `Stripe Billing` `Billing Meters` `Stripe Checkout` `Customer Portal` `Webhooks` `Test Clocks` `Usage-Based Pricing` `Unit Economics` `Reconciliation` `OpenAI API` `Node.js` `Vercel` `Claude Code`
 
+### 📘 Pivot Trainer
+**Turns an organization's own policies into a short training that never makes anything up**
+
+Built for HR and training teams, not developers. Add SOPs and policies (Word, PDF, text, or pasted), pick a tone and a few rules, and describe the training. Pivot Trainer first checks that the documents actually cover the request: if part of it isn't there, it says so and builds only what it can. The result is a **5-slide lesson**, one interactive activity chosen to fit the content (a step-by-step flow for procedures, a practice conversation for people situations), and a **5-question quiz** whose misses link back to the exact slide and come back with the answers shuffled. The certificate unlocks only at 5 of 5.
+
+Every slide and question cites numbered sections with a quote. **Claude structured output** renders through fixed components; the code then confirms every quote word for word, and a **second model re-checks each claim** against its source. A tamper test plants a paraphrased quote, a banned phrase, and a changed time limit, and all three are caught. Documents are split into sections without the AI rewriting them, and nothing is stored between visits. Independent prototype; the sample companies are fictional.
+
+<p>
+  <img src="https://raw.githubusercontent.com/mrkygray-art/pivot-trainer/main/docs/images/source.webp" alt="Pivot Trainer lesson slide with the source policy section open beside it and the quoted words highlighted" width="760">
+</p>
+
+[Try the live demo](https://pivot-trainer-demo.vercel.app) · [Read the case study](https://ky-gray-portfolio.vercel.app/#pivot-trainer) · [View the code](https://github.com/mrkygray-art/pivot-trainer)
+
+`Claude API` `Structured Outputs` `Source-Grounded Generation` `Second-Model Verification` `Next.js` `TypeScript` `Tailwind CSS` `Playwright` `Vercel` `Claude Code`
+
 ### 🩺 PC Medic
 **An installable Windows assistant that checks the real computer before it answers**
 
@@ -235,7 +250,7 @@ I deploy working applications, test real workflows, identify friction, convert f
 `Claude` `ChatGPT` `Gemini` `Claude Code` `Claude API` `OpenAI API` `LangSmith` `LangGraph` `Ollama` `Qwen3` `ElevenLabs` `Deepgram` `Agent Testing` `LLM Evaluation`
 
 **Application Development**  
-`Next.js` `React` `JavaScript` `TypeScript` `Python` `FastAPI` `SQL`
+`Next.js` `React` `JavaScript` `TypeScript` `Tailwind CSS` `Python` `FastAPI` `SQL`
 
 **Cloud & Platform**  
 `Supabase` `PostgreSQL` `Docker` `Firebase` `Cloudflare Workers` `GitHub` `Vercel` `Twilio` `Stripe Billing`
