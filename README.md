@@ -150,6 +150,20 @@ AI only when it's needed. Questions the built-in engine can't answer go to Claud
 
 `Python` `Windows` `PowerShell` `Claude API` `Tool Use` `Web Search` `OpenAI API` `Privacy by Design` `Local Security` `PyInstaller` `Inno Setup` `Claude Code`
 
+### 🛩️ SkyClear Pre-Flight
+**A drone pre-flight check: can I fly here, right now, and how high?**
+
+Built while studying for the FAA Part 107 remote pilot exam. SkyClear opens on the phone's GPS position and turns FAA data into one call: **GO**, **HOLD** (for example, LAANC authorization still needed), or **NO-GO**. The FAA's own airspace layers say whether controlled airspace reaches the ground there, and the FAA UAS Facility Map gives the **LAANC grid ceiling**, shown as *Fly up to* in feet above ground and above sea level. Live **METAR and TAF** from aviationweather.gov are decoded element by element and checked against Part 107 limits, and an 18-item checklist covers the pilot, the drone, Remote ID, TFRs, and NOTAMs. A **LAANC tab** shows the altitude to ask for and how to request it in Aloft or Airspace Link's AirHub, and the result is a self-certified pre-flight record with a SHA-256 fingerprint. FAA sectional and terminal charts sit under the pin as map layers, and it installs on a phone as an app. Two rules: unknown values say "not confirmed" instead of guessing, and weather is live or clearly labeled SAMPLE, never an old copy.
+
+<p>
+  <img src="https://raw.githubusercontent.com/mrkygray-art/skyclear-preflight/main/docs/images/preflight.webp" alt="SkyClear pre-flight screen at LAX: a HOLD call, Fly up to 0 ft AGL, the FAA chart and the pre-flight record" width="560">
+  <img src="https://raw.githubusercontent.com/mrkygray-art/skyclear-preflight/main/docs/images/phone.webp" alt="SkyClear on a phone" width="170">
+</p>
+
+[Open the app](https://skyclear-preflight.vercel.app) · [Read the case study](https://ky-gray-portfolio.vercel.app/#skyclear) · [View the code](https://github.com/mrkygray-art/skyclear-preflight)
+
+`JavaScript` `Leaflet` `FAA ArcGIS Data` `aviationweather.gov` `Vercel Functions` `PWA` `Service Worker` `Geolocation` `Claude Code`
+
 ### 💬 SiteSnap Guide
 **The retrieval chatbot behind SiteSnap's Ask button, built on Cloudflare**
 
